@@ -28,3 +28,5 @@ _wfCache
 log.txt 
 errors.txt 
 traceback.txt
+game/saves/persistent
+game/saves/navigation.json
