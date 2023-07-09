@@ -12,10 +12,26 @@ define e = Character("Miss Eileen")
 
 # The game starts here.
 
+label splashscreen:
+    scene black
+
+    show text "{color=#ffffff}UCLA ACM Studio Presents...{/color}"with dissolve
+    with Pause(3)
+
+    scene black with dissolve
+    
+    show logo with dissolve
+    with Pause(3)
+
+    scene black with dissolve
+    with Pause(1)
+
+    scene classroomam with dissolve
+    return
+
 label start:
-
-    scene classroom
-
+    
+    scene classroomam with dissolve
     ############################## Introduction
 
     show abigail smile
@@ -69,7 +85,7 @@ label feedback3_portraitA:
 
     ############################## Self Portrait — Abigail Conversation
 label convo1:
-    scene classroom
+    scene classroompm
 
     show abigail neutral
     a "Hi Miss E, I just want to follow up on the feedback I recieved."
@@ -95,7 +111,7 @@ label convo1:
     ############################## Still Life Grading
     
     ############################## Still Life — Bianca Conversation
-    scene classroom
+    scene classroompm
 
     show bianca speak
     b "Hey teach, it kinda seemed like you had a problem with my art."
@@ -130,7 +146,7 @@ label convo1:
 
     ############################## Scenery — Clementine Conversation
 
-    scene classroom
+    scene classroompm
 
     show clementine neutral
     c "Hey Miss E,"
@@ -160,7 +176,7 @@ label convo1:
 
     ############################## Master Study — Desiree Conversation
 
-    scene classroom
+    scene classroompm
 
     # This ends the game.
 
