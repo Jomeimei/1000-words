@@ -30,3 +30,4 @@ errors.txt
 traceback.txt
 game/saves/persistent
 game/saves/navigation.json
+log.txt
