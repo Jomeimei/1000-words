@@ -64,19 +64,19 @@ define gui.name_text_font = "NanumPenScript-Regular.ttf"
 define gui.interface_text_font = "NanumPenScript-Regular.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 48
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 64
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 48
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 36
+define gui.label_text_size = 48
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 24
+define gui.notify_text_size = 48
 
 ## The size of the game's title.
 define gui.title_text_size = 75
@@ -187,7 +187,7 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
-define gui.quick_button_text_size = 21
+define gui.quick_button_text_size = 32
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
