@@ -289,55 +289,60 @@ screen navigation():
 
     vbox:
         style_prefix "navigation"
-        yalign 0.9
-
-        if renpy.get_screen("main_menu"):
-            xalign 0.9
-        else:
-            xoffset 60
 
         spacing gui.navigation_spacing
 
-        if main_menu:
+        if renpy.get_screen("main_menu"):
+            xalign 0.9
+            yalign 0.9
 
             # textbutton _("Start") action Start()
             imagebutton:
                 auto "menuUI/play_%s.png"
                 action Start()
                 ypadding 20
+            
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                ## Help isn't necessary or relevant to mobile devices.
+                #textbutton _("Help") action ShowMenu("help")
+                imagebutton:
+                    auto "menuUI/howto_%s.png"
+                    action ShowMenu("help")
 
-        #else:
+            hbox:
+            
+                imagebutton:
+                    auto "menuUI/credits_%s.png"
+                    action ShowMenu("about")
+                    ypadding 20
 
-            # textbutton _("History") action ShowMenu("history")
+                imagebutton:
+                    auto "menuUI/settings_%s.png"
+                    action ShowMenu("preferences")
+                    xpadding 20
+                    ypadding 20
 
-            # textbutton _("Save") action ShowMenu("save")
+            if renpy.variant("pc"):
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                # textbutton _("Quit") action Quit(confirm=not main_menu)
+                imagebutton:
+                    auto "menuUI/quit_%s.png"
+                    action Quit(confirm=not main_menu)
 
+        else:
+            xoffset 60
+            yalign 0.8
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("How-To") action ShowMenu("help")
+            textbutton _("Credits") action ShowMenu("about")
+            textbutton _("Settings") action ShowMenu("preferences")
+            if renpy.variant("pc"):
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                textbutton _("Quit") action Quit(confirm=not main_menu)
 
-        # textbutton _("Load") action ShowMenu("load")
-
-        # textbutton _("Preferences") action ShowMenu("preferences")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            #textbutton _("Help") action ShowMenu("help")
-            imagebutton:
-                auto "menuUI/howto_%s.png"
-                action ShowMenu("help")
-
-
-        hbox:
-            # textbutton _("About") action ShowMenu("about")
-            imagebutton:
-                auto "menuUI/credits_%s.png"
-                action ShowMenu("about")
-                ypadding 20
-
-            imagebutton:
-                auto "menuUI/settings_%s.png"
-                action ShowMenu("preferences")
-                xpadding 20
-                ypadding 20
 
         if _in_replay:
 
@@ -346,16 +351,6 @@ screen navigation():
         elif not main_menu:
 
             textbutton _("Main Menu") action MainMenu()
-
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            # textbutton _("Quit") action Quit(confirm=not main_menu)
-            imagebutton:
-                auto "menuUI/quit_%s.png"
-                action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -498,7 +493,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     textbutton _("Return"):
         style "return_button"
-
+        yalign 0.96
         action Return()
 
     label title
@@ -573,7 +568,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("Credits"), scroll="viewport"):
 
         style_prefix "about"
 
@@ -586,7 +581,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            # text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 style about_label is gui_label
@@ -739,7 +734,7 @@ screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("Settings"), scroll="viewport"):
 
         vbox:
 
@@ -989,7 +984,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Help"), scroll="viewport"):
+    use game_menu(_("How-To"), scroll="viewport"):
 
         style_prefix "help"
 

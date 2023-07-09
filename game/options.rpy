@@ -23,13 +23,24 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "Made for GMTK Game Jam 2023"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+
+    Joice He — Character Artist
+
+    Caleb Kim — Writer
+
+    Kenzie MacDougal — Programmer, UI/UX Designer
+
+    Yun Tsai — Musical Composer
+
+    Faustine Wang — Environmental Artist
+
 """)
 
 
