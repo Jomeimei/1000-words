@@ -568,14 +568,14 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("Credits"), scroll="viewport"):
+    use game_menu(("Credits")):
 
         style_prefix "about"
 
         vbox:
 
-            label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            #label "[config.name!t]"
+            text _("[config.version!t]")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
