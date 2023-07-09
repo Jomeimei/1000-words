@@ -3,20 +3,44 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define a = Character("Abigail")
-define b = Character("Bianca")
-define c = Character("Clementine")
-define d = Character("Desiree")
-define e = Character(None, window_background=None)
+define a = Character("Abigail", what_slow_cps=55)
+define b = Character("Bianca", what_slow_cps=55)
+define c = Character("Clementine",what_slow_cps=55)
+define d = Character("Desiree", what_slow_cps=55)
+define e = Character("Miss Eileen",what_slow_cps=55)
+define n = Character(None, what_slow_cps=55)
 
 
 # The game starts here.
 
+label splashscreen:
+    scene black
+
+    show text "{color=#ffffff}UCLA ACM Studio Presents...{/color}"with dissolve
+    with Pause(3)
+
+    scene black with dissolve
+    
+    show logo with dissolve
+    with Pause(3) 
+
+    scene black with dissolve
+    with Pause(1)
+
+    return
+
 label start:
 
-    scene classroom
+    scene black with Pause(1)
+    play sound shortschoolbell
+    with Pause(4)
+    
+    scene classroomam with dissolve 
+    with Pause(2)
 
     ############################## Introduction
+
+    n "The school day begins"
 
     show abigail smile
     a "Miss E, I'd like to express my excitement for the upcoming project."
@@ -87,14 +111,14 @@ label feedback2_portraitB:
 
     ############################## Self Portrait — Abigail Conversation
 label convo1:
-    scene classroom
+    scene classroompm
 
     show abigail neutral
     a "Hi Miss E, I just want to follow up on the feedback I recieved."
     show abigail speak
     a "You said my work felt unfinished, but I received a high grade anyways."
 
-    e "(Your work aligned very closely to the provided prompt.)"
+    e "Your work aligned very closely to the provided prompt."
 
     show abigail troubled1
     a "I know it came out ok,"
@@ -103,7 +127,7 @@ label convo1:
     show abigail neutral
     a "I was drawing myself, and yet all I could think about was the technique."
 
-    e "(Was there something else you were hoping for?)"
+    e "Was there something else you were hoping for?"
 
     show abigail speak
     a "I suppose I expected more self-reflection."
@@ -113,7 +137,7 @@ label convo1:
     ############################## Still Life Grading
     
     ############################## Still Life — Bianca Conversation
-    scene classroom
+    scene classroompm
 
     show bianca speak
     b "Hey teach, it kinda seemed like you had a problem with my art."
@@ -148,7 +172,7 @@ label convo1:
 
     ############################## Scenery — Clementine Conversation
 
-    scene classroom
+    scene classroompm
 
     show clementine neutral
     c "Hey Miss E,"
@@ -178,7 +202,7 @@ label convo1:
 
     ############################## Master Study — Desiree Conversation
 
-    scene classroom
+    scene classroompm
 
     # This ends the game.
 

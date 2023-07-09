@@ -31,7 +31,7 @@ define config.version = "Made for GMTK Game Jam 2023"
 
 define gui.about = _p("""
 
-    Joice He — Character Artist
+    Joice He — Character Artist, Game Designer
 
     Caleb Kim — Writer
 
