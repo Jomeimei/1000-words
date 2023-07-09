@@ -22,7 +22,7 @@ label splashscreen:
     scene black with dissolve
     
     show logo with dissolve
-    with Pause(3)
+    with Pause(3) 
 
     scene black with dissolve
     with Pause(1)

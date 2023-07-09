@@ -1,4 +1,4 @@
-Sun Jul  9 14:31:58 2023
+Sun Jul  9 14:35:41 2023
 macOS-10.15.7-x86_64-i386-64bit
 Ren'Py 8.0.3.22090809
  
@@ -7,7 +7,7 @@ Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.03s
-Loading script took 0.12s
+Loading script took 0.11s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError('dlopen(/Users/joicehe/Desktop/Ren.3-sdk/lib/py3-mac-x86_64/libsteam_api.dylib, 6): image not found')
@@ -33,7 +33,7 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.28s
+Interface start took 0.31s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1792, 1120)

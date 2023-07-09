@@ -31,3 +31,5 @@ traceback.txt
 game/saves/persistent
 game/saves/navigation.json
 log.txt
+game/cache/screens.rpyb
+game/cache/shaders.txt
