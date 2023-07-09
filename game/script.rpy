@@ -7,7 +7,7 @@ define a = Character("Abigail")
 define b = Character("Bianca")
 define c = Character("Clementine")
 define d = Character("Desiree")
-define e = Character(None, window_background=None)
+define e = Character("Miss Eileen")
 
 
 # The game starts here.
