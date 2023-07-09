@@ -27,12 +27,11 @@ label start:
     show abigail troubled2
     a "...and if I'm being honest, they sort of stress me out. Art takes me long enough as is."
 
-    jump self_portrait
+    jump self_portraitA
 
     ############################## Self Portrait Grading
-label self_portrait:
+label self_portraitA:
     scene teacher_desk
-
     show abigail portrait
 
     menu:
@@ -49,7 +48,7 @@ label feedback1_portraitA:
 
     e ""
 
-    jump convo1
+    jump self_portraitB
 
 label feedback2_portraitA:
     scene teacher_desk
@@ -57,7 +56,7 @@ label feedback2_portraitA:
 
     e ""
 
-    jump convo1
+    jump self_portraitB
 
 label feedback3_portraitA:
     scene teacher_desk
@@ -65,7 +64,26 @@ label feedback3_portraitA:
 
     e ""
 
+    jump self_portraitB
+
+label self_portraitB:
+    scene teacher_desk
+    show bianca portrait
+
+    menu:
+        "not a self portrait?":
+            jump feedback1_portraitB
+        "a character...?":
+            jump feedback2_portraitB
+
+label feedback1_portraitB:
+
     jump convo1
+
+label feedback2_portraitB:
+    
+    jump convo1
+
 
     ############################## Self Portrait — Abigail Conversation
 label convo1:
