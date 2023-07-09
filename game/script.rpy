@@ -38,12 +38,15 @@ label start:
     scene classroomam with dissolve 
     with Pause(2)
 
-    ############################## Introduction
+############################## Introduction
 
     n "The school day begins"
 
+    e "As a teacher, it's my job to guide students towards success."
+    e "But art is a tricky subject... I want encourage their creative expression without neglecting the fundamentals."
+
     show abigail smile
-    a "Miss E, I'd like to express my excitement for the upcoming project."
+    a "Miss Eileen, I'd like to express my excitement for the upcoming project."
 
     show abigail speak
     a "I haven't attempted a self-portrait in a long time..."
@@ -53,7 +56,7 @@ label start:
 
     jump self_portraitA
 
-    ############################## Self Portrait Grading
+############################## Self Portrait Grading
 label self_portraitA:
     scene teacher_desk
     show abigail portrait
@@ -69,25 +72,19 @@ label self_portraitA:
 label feedback1_portraitA:
     scene teacher_desk
     show abigail portrait f1
-
-    e ""
-
+    e "This isn't the first time Abigail has submitted incomplete work... such a shame."
     jump self_portraitB
 
 label feedback2_portraitA:
     scene teacher_desk
     show abigail portrait f2
-
-    e ""
-
+    e "This isn't the first time Abigail has submitted incomplete work... such a shame."
     jump self_portraitB
 
 label feedback3_portraitA:
     scene teacher_desk
     show abigail portrait f3
-
-    e ""
-
+    e "This isn't the first time Abigail has submitted incomplete work... such a shame."
     jump self_portraitB
 
 label self_portraitB:
@@ -101,23 +98,49 @@ label self_portraitB:
             jump feedback2_portraitB
 
 label feedback1_portraitB:
-
-    jump convo1
+    scene teacher_desk
+    show bianca portrait f1
+    e "Bianca is always taking shortcuts. I wish she'd take the time to learn proper techniques before pulling so much inspiration from the internet."
+    jump self_portraitC
 
 label feedback2_portraitB:
-    
+    scene teacher_desk
+    show bianca portrait f2
+    e "Bianca is always taking shortcuts. I wish she'd take the time to learn proper techniques before pulling so much inspiration from the internet."
+    jump self_portraitC
+
+label self_portraitC:
+    scene teacher_desk
+    show clementine portrait
+
+    menu:
+        "good effort..":
+            jump feedback1_portraitC
+        "not what we practiced":
+            jump feedback2_portraitC
+
+label feedback1_portraitC:
+    scene teacher_desk
+    show clementine portrait f1
+    e "Clementine is such a nice girl, but she gets so caught up on the details she loses sight of the bigger picture."
     jump convo1
 
+label feedback2_portraitC:
+    scene teacher_desk
+    show clementine portrait f2
+    e "Clementine is such a nice girl, but she gets so caught up on the details she loses sight of the bigger picture."
+    jump convo1
 
     ############################## Self Portrait — Abigail Conversation
 label convo1:
     scene classroompm
 
-    show abigail neutral
-    a "Hi Miss E, I just want to follow up on the feedback I recieved."
+    show abigail smile
+    a "Hi Miss Eileen, I just want to follow up on the feedback I recieved."
     show abigail speak
     a "You said my work felt unfinished, but I received a high grade anyways."
 
+    show abigail neutral
     e "Your work aligned very closely to the provided prompt."
 
     show abigail troubled1
@@ -127,6 +150,7 @@ label convo1:
     show abigail neutral
     a "I was drawing myself, and yet all I could think about was the technique."
 
+    show abigail neutral
     e "Was there something else you were hoping for?"
 
     show abigail speak
@@ -142,28 +166,30 @@ label convo1:
     show bianca speak
     b "Hey teach, it kinda seemed like you had a problem with my art."
 
-    # Teacher: I need to see more effort from you. I appreciate your enthusiasm but your technique needs improvement.
+    show bianca neutral
+    e "I need to see more effort from you. I appreciate your enthusiasm but your technique needs improvement."
 
     show bianca frown
     b "I actually spent a lot of time on it! And like, we can't all be Abigail."
     show bianca smile
     b "Can you even draw a still-life?"
 
-    # Teacher: I demonstrated techniques for painting still lifes on Tuesday. You were absent.
+    e "I demonstrated techniques for painting still lifes on Tuesday. You were absent."
 
     show bianca neutral
     b "Oh."
 
-    # Teacher: You're taking too many shortcuts with your art by referencing others and neglecting the basics.
+    e "You're taking too many shortcuts with your art by referencing others and neglecting the basics."
 
     show bianca grit
     b "Are you serious?"
 
-    # Teacher: Yes, Bianca. But I also believe in you as an artist, and I know you're capable of more if you set your mind to it.
+    e "Yes, Bianca. But I also believe in you as an artist, and I know you're capable of more if you set your mind to it."
+
     show bianca serious
     b "Ok. What's next week?"
 
-    # Teacher: Scenery. You got this!
+    e "Scenery. You got this!"
 
     show bianca smile
     b "Ok teach. See ya on Monday."
@@ -179,7 +205,7 @@ label convo1:
     show clementine talk
     c "if it's not too much trouble, I was hoping to maybe get some feedback on my scenery work?"
 
-    # Teacher: Sure Clementine. I liked what you did with the composition, but the texture felt very flat.
+    e "Sure Clementine. I liked what you did with the composition, but the texture felt very flat."
 
     show clementine frown
     c "I noticed that too,"
@@ -188,12 +214,12 @@ label convo1:
     show clementine dejected
     c "... and I didn't want to mess up another piece by trying."
 
-    # Teacher: Practice is how you improve! Don't be afraid to take risks.
+    e "Practice is how you improve! Don't be afraid to take risks."
 
     show clementine sadsmile
     c "You're right, thanks Miss E."
 
-    # Teacher: Clementine, you're an excellent student. Don't sweat it. Just remember that if you stick to what you know, you won't grow.
+    e "Clementine, you're an excellent student. Don't sweat it. Just remember that if you stick to what you know, you won't grow."
 
     show clementine smile
     c "Ok! I'll try something new for my Master Study then. Bye Miss E, I'll see you on Monday!"
