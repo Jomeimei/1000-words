@@ -1,54 +1,47 @@
-Fri Jul  7 14:30:38 2023
-macOS-10.15.7-x86_64-i386-64bit
-Ren'Py 8.0.3.22090809
+Sat Jul  8 20:44:00 2023
+macOS-13.4-arm64-arm-64bit
+Ren'Py 8.1.1.23060707
  
 
-Bootstrap to the start of init.init took 0.04s
-Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.06s
-Loading save slot metadata. took 0.00s
-Loading persistent took 0.00s
-Faled to initialize steam: OSError('dlopen(/Users/joicehe/Desktop/Ren.3-sdk/lib/py3-mac-x86_64/libsteam_api.dylib, 6): image not found')
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
+Bootstrap to the start of init.init. took 0.02s
+Early init. took 0.00s
+Loader init. took 0.01s
+Loading error handling. took 0.01s
+Loading script. took 0.14s
+Loading save slot metadata. took 0.01s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.01s
 Index archives took 0.00s
-Dump and make backups. took 0.04s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
+Backing up script files to '/Users/kenziemacdougal/Library/RenPy/backups/1000-words':
+Dump and make backups. took 0.02s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.00s
+Creating interface object. took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.01s
 Build styles took 0.00s
-Load screen analysis took 0.03s
+Load screen analysis took 0.00s
 Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save screen analysis took 0.01s
+Prepare screens took 0.02s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.21s
+Interface start. took 0.15s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1792, 1120)
+primary display bounds: (0, 0, 1470, 956)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon Pro 5300M OpenGL Engine'
-Version: b'2.1 ATI-3.10.23'
+Vendor: "b'Apple'"
+Renderer: b'Apple M2'
+Version: b'2.1 Metal - 83.1'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1690, 951) drawable=(3380, 1902)
-Could not open 'cache/shaders.txt':
+Screen sizes: virtual=(1920, 1080) physical=(828, 466) drawable=(1656, 932)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
