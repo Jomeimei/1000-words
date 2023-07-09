@@ -3,11 +3,12 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define a = Character("Abigail")
-define b = Character("Bianca")
-define c = Character("Clementine")
-define d = Character("Desiree")
-define e = Character("Miss Eileen")
+define a = Character("Abigail", what_slow_cps=55)
+define b = Character("Bianca", what_slow_cps=55)
+define c = Character("Clementine",what_slow_cps=55)
+define d = Character("Desiree", what_slow_cps=55)
+define e = Character("Miss Eileen",what_slow_cps=55)
+define n = Character(None, what_slow_cps=55)
 
 
 # The game starts here.
@@ -26,13 +27,20 @@ label splashscreen:
     scene black with dissolve
     with Pause(1)
 
-    scene classroomam with dissolve
     return
 
 label start:
+
+    scene black with Pause(1)
+    play sound shortschoolbell
+    with Pause(4)
     
-    scene classroomam with dissolve
+    scene classroomam with dissolve 
+    with Pause(2)
+
     ############################## Introduction
+
+    n "The school day begins"
 
     show abigail smile
     a "Miss E, I'd like to express my excitement for the upcoming project."
@@ -92,7 +100,7 @@ label convo1:
     show abigail speak
     a "You said my work felt unfinished, but I received a high grade anyways."
 
-    e "(Your work aligned very closely to the provided prompt.)"
+    e "Your work aligned very closely to the provided prompt."
 
     show abigail troubled1
     a "I know it came out ok,"
@@ -101,7 +109,7 @@ label convo1:
     show abigail neutral
     a "I was drawing myself, and yet all I could think about was the technique."
 
-    e "(Was there something else you were hoping for?)"
+    e "Was there something else you were hoping for?"
 
     show abigail speak
     a "I suppose I expected more self-reflection."

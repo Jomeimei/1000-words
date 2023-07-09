@@ -1,13 +1,13 @@
-Sun Jul  9 13:57:20 2023
+Sun Jul  9 14:31:58 2023
 macOS-10.15.7-x86_64-i386-64bit
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.04s
+Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.02s
-Loading script took 0.11s
+Loading error handling took 0.03s
+Loading script took 0.12s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError('dlopen(/Users/joicehe/Desktop/Ren.3-sdk/lib/py3-mac-x86_64/libsteam_api.dylib, 6): image not found')
@@ -28,12 +28,12 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.04s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.25s
+Interface start took 0.28s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1792, 1120)
@@ -45,17 +45,3 @@ Version: b'2.1 ATI-3.10.23'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(828, 466) drawable=(1656, 932)
 Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
