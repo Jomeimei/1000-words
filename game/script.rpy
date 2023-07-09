@@ -7,7 +7,7 @@ define a = Character("Abigail")
 define b = Character("Bianca")
 define c = Character("Clementine")
 define d = Character("Desiree")
-define e = Character(None, window_background="gui/player_textbox.png")
+define e = Character(None, window_background=None)
 
 
 # The game starts here.
@@ -27,13 +27,48 @@ label start:
     show abigail troubled2
     a "...and if I'm being honest, they sort of stress me out. Art takes me long enough as is."
 
-    ############################## Self Portrait Grading
-    
-    # scene teacher_desk
+    jump self_portrait
 
+    ############################## Self Portrait Grading
+label self_portrait:
+    scene teacher_desk
+
+    show abigail portrait
+
+    menu:
+        "needs some work":
+            jump feedback1_portraitA
+        "it's nice...":
+            jump feedback2_portraitA
+        "looks unfinished":
+            jump feedback3_portraitA
+
+label feedback1_portraitA:
+    scene teacher_desk
+    show abigail portrait f1
+
+    e ""
+
+    jump convo1
+
+label feedback2_portraitA:
+    scene teacher_desk
+    show abigail portrait f2
+
+    e ""
+
+    jump convo1
+
+label feedback3_portraitA:
+    scene teacher_desk
+    show abigail portrait f3
+
+    e ""
+
+    jump convo1
 
     ############################## Self Portrait — Abigail Conversation
-
+label convo1:
     scene classroom
 
     show abigail neutral
