@@ -123,12 +123,42 @@ label feedback1_portraitC:
     scene teacher_desk
     show clementine portrait f1
     e "Clementine is such a nice girl, but she gets so caught up on the details she loses sight of the bigger picture."
-    jump convo1
+    jump self_portraitD
 
 label feedback2_portraitC:
     scene teacher_desk
     show clementine portrait f2
     e "Clementine is such a nice girl, but she gets so caught up on the details she loses sight of the bigger picture."
+    jump self_portraitD
+
+label self_portraitD:
+    scene teacher_desk
+    show desiree portrait
+
+    menu:
+        "???":
+            jump feedback1_portraitD
+        "this is you?":
+            jump feedback2_portraitD
+        "well, it looks cool":
+            jump feedback3_portraitD
+
+label feedback1_portraitD:
+    scene teacher_desk
+    show desiree portrait f1
+    e "I will never understand why Desiree insists on drawing whales for every assignment. Her composition is visually interesting but this is most certainly not a self portrait."
+    jump convo1
+
+label feedback2_portraitD:
+    scene teacher_desk
+    show desiree portrait f2
+    e "I will never understand why Desiree insists on drawing whales for every assignment. Her composition is visually interesting but this is most certainly not a self portrait."
+    jump convo1
+
+label feedback3_portraitD:
+    scene teacher_desk
+    show desiree portrait f3
+    e "I will never understand why Desiree insists on drawing whales for every assignment. Her composition is visually interesting but this is most certainly not a self portrait."
     jump convo1
 
     ############################## Self Portrait — Abigail Conversation
